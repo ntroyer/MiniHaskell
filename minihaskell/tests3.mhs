@@ -1,0 +1,17 @@
+----------------------------------------------------------------
+-- Computer Science 320 (Fall, 2012)
+-- Concepts of Programming Languages
+--
+-- Assignment 7
+--   tests3.mhs
+--	 Nat Troyer
+
+-- Assignment 7, Problem 3, Part B
+
+-- This function should return False.
+
+let z = (\x -> f (x x));
+	y = \f -> z z
+in
+   (\() -> (\x -> (\y ->
+      (&&) ((&&) False y) ((||) True y)) (y \x -> x)) (y \x -> x)) (y \x -> x)
